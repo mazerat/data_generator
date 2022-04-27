@@ -3,7 +3,6 @@ from random import randint
 import os
 import sys
 import shutil
-# import logging
 
 from logger import get_logger
 

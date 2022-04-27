@@ -1,8 +1,8 @@
-import unittest
 import os
-import uuid
-import shutil
 import re
+import shutil
+import unittest
+import uuid
 
 from utils import resource_calculator_utils
 

@@ -2,7 +2,6 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler  # pylint: disable=C0412
 
-
 LOG_NAME = "resource_calculator.log"
 LOG_FOLDER = ".logs"
 LOG_FILE_SIZE_MB = 5

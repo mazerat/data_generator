@@ -1,5 +1,5 @@
-import unittest
 import os
+import unittest
 import uuid
 
 from utils.database_connector import DatabaseConnector

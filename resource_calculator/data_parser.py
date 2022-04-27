@@ -1,38 +1,16 @@
 """Tool to parse data files and upload statistics of abstract resource consumption per user"""
 
-# import logging
 import os
 import time
-# from logging.handlers import RotatingFileHandler  # pylint: disable=C0412
 
 import click
 
-from utils import (database_connector, resource_calculator_utils, user_map_wrapper)
 import logger
+from utils import (database_connector, resource_calculator_utils,
+                   user_map_wrapper)
 
 
 LOGGER = logger.get_logger(__name__)
-# LOG_FILE = "data_parser.log"
-# LOG_FOLDER = ".logs"
-# LOG_FILE_SIZE_MB = 5
-# LOG_FILE_BACKUP_COUNT = 5
-#
-# LOG_FULL_PATH = os.path.join(LOG_FOLDER, LOG_FILE)
-# os.makedirs(os.path.dirname(LOG_FULL_PATH), exist_ok=True)
-#
-# LOG_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-# HANDLER = RotatingFileHandler(LOG_FULL_PATH,
-#                               maxBytes=LOG_FILE_SIZE_MB*1024*1024,
-#                               backupCount=LOG_FILE_BACKUP_COUNT)
-# HANDLER.setFormatter(LOG_FORMATTER)
-# HANDLER.setLevel(logging.INFO)
-#
-# HANDLER_STDOUT = logging.StreamHandler()
-#
-# LOGGER = logging.getLogger(__name__)
-# LOGGER.setLevel(logging.INFO)
-# LOGGER.addHandler(HANDLER)
-# LOGGER.addHandler(HANDLER_STDOUT)
 
 
 def upload_data_to_db_by_chunks(db_connector, user_map, file):

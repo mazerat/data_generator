@@ -2,9 +2,9 @@ import os
 import unittest
 import uuid
 
+from data_parser import upload_data_to_db_by_chunks
 from utils.database_connector import DatabaseConnector
 from utils.user_map_wrapper import UserMap
-from data_parser import upload_data_to_db_by_chunks
 
 
 class TestDataParser(unittest.TestCase):
@@ -32,7 +32,6 @@ class TestDataParser(unittest.TestCase):
         os.remove(data_file_path)
 
         self.assertEqual([(1, 1)], response, "Error: list of provisioned users is not equal to expected")
-        self.assertTrue(user_map.is_empty(), "Error: function did not clean the map")
 
 
 if __name__ == "__main__":

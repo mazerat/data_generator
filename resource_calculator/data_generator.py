@@ -1,39 +1,16 @@
 """Tool to generate data files that contain statistics of abstract resource consumption per user"""
 
-# import logging
 import os
-# from logging.handlers import RotatingFileHandler  # pylint: disable=C0412
 
 import click
 
-from utils import resource_calculator_utils
 import logger
+from utils import resource_calculator_utils
 
 
 LOGGER = logger.get_logger(__name__)
-# LOG_FILE = "data_generator.log"
-# LOG_FOLDER = ".logs"
-# LOG_FILE_SIZE_MB = 5
-# LOG_FILE_BACKUP_COUNT = 5
-#
+
 TEMP_FOLDER_FOR_FILE_GENERATION = os.getenv('TEMP', '/tmp')
-#
-# LOG_FULL_PATH = os.path.join(LOG_FOLDER, LOG_FILE)
-# os.makedirs(os.path.dirname(LOG_FULL_PATH), exist_ok=True)
-#
-# LOG_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-# HANDLER = RotatingFileHandler(LOG_FULL_PATH,
-#                               maxBytes=LOG_FILE_SIZE_MB*1024*1024,
-#                               backupCount=LOG_FILE_BACKUP_COUNT)
-# HANDLER.setFormatter(LOG_FORMATTER)
-# HANDLER.setLevel(logging.INFO)
-#
-# HANDLER_STDOUT = logging.StreamHandler()
-#
-# LOGGER = logging.getLogger(__name__)
-# LOGGER.setLevel(logging.INFO)
-# LOGGER.addHandler(HANDLER)
-# LOGGER.addHandler(HANDLER_STDOUT)
 
 
 def fill_file_by_records_count(output_folder, filename, records_amount):
