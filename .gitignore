@@ -1,0 +1,5 @@
+.idea
+resource_calculator/.logs
+resource_calculator/backup
+resource_calculator/data_files
+resource_calculator/db_file.db
